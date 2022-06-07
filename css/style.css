@@ -151,8 +151,8 @@ strong {
     content: '';
     display: block;
     position: relative;
-    top: 2.9px;
-    left: 3px;
+    top: 0.18125em;             /* 2.9px */
+    left: 0.1875em;                  /* 3px */
     width: 21.0625em;       /* 337px */
     height: 0.9375em;       /* 15px */
     border-radius: 1em;
@@ -222,12 +222,12 @@ small:last-child {
     }
 
     .bar::after {
-        left:175px;
+        left: 11.1875em;
     }
 
     .comment {
-        top: 130px;
-        right: 85px;
+        top: 8.125em;
+        right: 5.3125em;
     }
 
     .comment::before {
@@ -249,7 +249,7 @@ small:last-child {
     }
 
     .text {
-        font-size: 12px;
+        font-size: 0.75em;
         margin-left: 1em;
     }
 
@@ -258,6 +258,6 @@ small:last-child {
     }
 
     .bar::after {
-        left: 157.8px;
+        left: 10.0625em;
     }
 }
