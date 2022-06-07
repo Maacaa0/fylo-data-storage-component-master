@@ -46,7 +46,7 @@ main {
     border-radius: .5em 6.5em .5em .5em;
     background-image: url(../images/logo.svg);
     background-repeat: no-repeat;
-    background-position: top 40px left 40px ;
+    background-position: top 2.5em left 2.5em ;
 }
 
 img {
@@ -102,8 +102,8 @@ img:hover {
     font-weight: 700;
     width: 11.1em;
     height: 4.5em;
-    top: -48.5px;
-    right: 39.7px;
+    top: -3.03125em;
+    right: 2.48125em;
     border-radius: .5em;
     background-color: white;
     color: var(--GrayishBlue);
