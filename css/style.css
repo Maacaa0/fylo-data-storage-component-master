@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+:root {
+    --PaleBlue: hsl(243, 100%, 93%);
+    --GrayishBlue: hsl(229, 7%, 55%);
+    --DarkBlue: hsl(228, 56%, 26%);
+    --VeryDarkBlue: hsl(229, 57%, 11%);
+    --Scope: hsl(230, 55%, 18%);
+
+    --Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Raleway', sans-serif;
+    background: url(../images/bg-desktop.png) bottom left no-repeat;
+    background-size: 100% 50%;
+    background-color: var(--VeryDarkBlue);
+}
+
+main {
+    display: flex;
+    gap:3%;
+}
+
+.box {
+    background-color: var(--DarkBlue);
+}
+
+/* LEFT SIDE */
+
+.left {
+    width: 22.5em;
+    height: 12.5em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    border-radius: .5em 6.5em .5em .5em;
+    background-image: url(../images/logo.svg);
+    background-repeat: no-repeat;
+    background-position: top 40px left 40px ;
+}
+
+img {
+    padding: .85em 0.7em;
+    margin-bottom: 2.5em;    /* 40px / 16 */
+    background-color: var(--VeryDarkBlue);
+    border-radius: .6em;
+}
+
+img:first-child {
+    padding: 0.73em .9em;
+    margin-right: 1em;
+    margin-left: 2.5em;
+}
+
+img:last-child {
+    padding: 0.97em 0.75em;
+    margin-left: 1em;
+}
+
+img:hover {
+    background-color: hsl(233deg 96% 12% / 62%);
+    transition: ease 500ms;
+    cursor: pointer;
+}
+
+/* RIGHT SIDE */
+
+.right {
+    position: relative;
+    width: 34.9em;
+    height: 9.5em;
+    padding-left: 2.6em;
+    padding-top: 1.5em;
+    align-self: flex-end;
+    border-radius: .5em;
+}
+
+
+.text {
+    color: var(--PaleBlue);
+    font-size: 0.875em;        /* 14px / 16 */
+    letter-spacing: .2px;
+    
+}
+
+.value {
+    font-weight: 700;
+}
+
+.comment {
+    position: absolute;
+    font-weight: 700;
+    width: 11.1em;
+    height: 4.5em;
+    top: -48.5px;
+    right: 39.7px;
+    border-radius: .5em;
+    background-color: white;
+    color: var(--GrayishBlue);
+    text-transform: uppercase;   
+    text-align: center;
+    padding-top: .8em;
+    
+}
+
+.comment::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 3.875em;          /* 62px */
+    left: 8.975em;      /* 143.6px */
+    border-bottom: 32px solid transparent;
+    border-top: 0px solid transparent;
+    border-right: 34px solid white;
+}
+
+strong {
+    color: black;
+    font-size: 2.5em;
+}
+
+.gb-left {
+    letter-spacing: .3px;
+    font-size: 0.8125em;        /* 13px / 16 */
+    margin-left: .5em;
+    vertical-align: super;
+}
+
+
+.bar {
+    background-color: var(--Scope);
+    border-radius: 1em;
+    width: 28.1em;
+    height: .8em;
+    margin-left: 0.375em;       /* 6px */
+    margin-top: 1.25em;       /* 20px */
+    outline: 5px solid var(--Scope);
+
+}
+
+.bar::before {
+    content: '';
+    display: block;
+    position: relative;
+    top: -1px;
+    width: 21.0625em;       /* 337px */
+    height: 0.9375em;       /* 15px */
+    border-radius: 1em;
+    background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+}
+
+.bar::after {
+    content: '';
+    display: block;
+    position: relative;
+    top: -1em;             /* -16px */
+    left: 20.125em;            /* 322px */
+    width: 0.9375em;        /* 15px */
+    height: 0.9375em;       /* 15px */
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: inset 0px 0px 4px darkred;
+    cursor: pointer;
+}
+
+
+.scope {
+    display: flex;
+    justify-content: space-between;
+}
+
+small {
+    color: var(--PaleBlue);
+    margin-top: 0.9em;
+    font-size: 0.75em;        /* 12px */
+    font-weight: 700;
+}
+
+small:last-child {
+    margin-right: 3.2em;
+}
+
+@media (max-width: 950px) {
+
+    body {
+        background-image: url(../images/bg-mobile.png);
+        background-size: cover;
+    }
+
+    main {
+        flex-direction: column;
+        
+    }
+
+    .left {
+        align-self: center;
+    }
+
+    .right {
+        align-self: center;
+        width: 100%;
+        margin-top: 5%;
+    }
+
+    .bar {
+        width: 82.5%;
+    }
+
+    .bar::before {
+        width: 72.5%;
+    }
+
+    .bar::after {
+        left:175px;
+    }
+
+    .comment {
+        top: 130px;
+        right: 85px;
+    }
+
+    .comment::before {
+        display: none;
+    }
+
+    .text {
+        margin-left: 1.2em;
+    }
+}
+
+@media (max-width: 400px) {
+    .box {
+        width: 130%;
+    }
+
+    .right {
+        margin-top: 7%;
+    }
+
+    .text {
+        font-size: 12px;
+        margin-left: 1em;
+    }
+
+    .comment {
+        width: 50%;
+    }
+
+    .bar::after {
+        left: 157.8px;
+    }
+}
